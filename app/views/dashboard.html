@@ -1,0 +1,13 @@
+<div class="container-fluid" >
+    <div class="row" style="padding: 20px;" ng-repeat="gro in grouds">
+        <div class="col-md-2 col-md-offset-1" ng-repeat="item in gro">
+            <div class="img-thumbnail" ng-click="setLocation('/service/'+item)">
+                <img ng-src="images/{{item}}.jpg"  alt="test" class="img-rounded img-responsive">
+                <div class="caption">
+                    <h4 class="text-center " ng-bind="item"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

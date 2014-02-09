@@ -1,0 +1,12 @@
+<p>This is the gdbus view.</p>
+<input ng-model="bus" /><button ng-click="searchBus(bus)">查询</button>
+
+<div ng-show="showBus" ng-repeat="direction in busRoute">
+    <span ng-bind="direction.name"></span>
+    <div ng-repeat="stop in direction.route">
+        <div>
+            <span ng-bind="stop.hasBus" style="color: red"></span>&nbsp;
+            <span ng-bind="stop.stopName" style="color: cornflowerblue"></span>
+        </div>
+    </div>
+</div>

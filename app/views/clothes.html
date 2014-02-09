@@ -1,0 +1,12 @@
+<p>This is the clothes view.</p>
+<table style="text-align: center">
+    <tr>
+        <th>星期日</th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th><th>星期六</th>
+    </tr>
+    <tr ng-repeat="week in weeks track by $index ">
+        <td ng-repeat="day in week track by $index ">
+                {{day}}
+        </td>
+    </tr>
+</table>
+

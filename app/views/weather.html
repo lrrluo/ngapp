@@ -1,0 +1,22 @@
+<p>This is the weather view. {{cities[0]}}</p>
+<label for="city">选择市:</label>
+<select id="city" ng-model="selectedCity" ng-options="c for c in cities"></select>
+<input type="button" ng-click="searchWeather(selectedCity)" value="查询"/>
+<div ng-show="showWeather">
+    <h4 ng-bind="weather[22]"></h4>
+    <div id="today">
+       <h3>{{weather[0]}} {{weather[1]}} </h3>
+       <span style="color:red" ng-bind="weather[5]"></span>
+       <span style="color:blue" ng-bind="weather[6]"></span>
+       <pre ng-bind="weather[10]" class="h3"></pre>
+    </div>
+    <div id="tomorrom">
+        <h3>{{weather[0]}} {{weather[1]}} </h3>
+        <pre class="h3"> {{weather[5]}} {{weather[6]}} {{weather[7]}}</pre>
+    </div>
+    <div id="three">
+        <h3>{{weather[0]}} {{weather[1]}} </h3>
+        <pre class="h3"> {{weather[12]}} {{weather[13]}} {{weather[14]}}</pre>
+    </div>
+</div>
+

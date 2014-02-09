@@ -1,0 +1,8 @@
+<h3 ng-bind="time"></h3>
+<input type="button" ng-click="getList()" value="Get Data" />
+<ol >
+    <li ng-repeat="item in spList">
+        <span ng-bind="item.time"></span>
+        <span ng-bind="item.content"></span>
+    </li>
+</ol>

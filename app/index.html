@@ -1,0 +1,106 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+<style>
+    body { padding-top: 70px;padding-bottom: 70px }
+</style>
+<body ng-app="ngappApp" ng-controller="RootCtrl">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+
+    <ul class="nav navbar-nav navbar-left">
+        <li>
+            <button type="button" class="btn btn-primary" ng-click="back()" ng-show="isShow">Back</button>
+        </li>
+    </ul>
+    <span  class="navbar-brand" ng-bind="title"></span>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a>
+                <button type="button" class="btn btn-primary" ng-click="setLocation('/setConfig')" ng-show="!isShow">定制</button>
+            </a>
+        </li>
+    </ul>
+</header>
+<footer>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a>
+                    <button type="button" class="btn btn-primary ">Default</button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+<div class="" ng-view=""></div>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/dashBoard.js"></script>
+<script src="scripts/services/serviceList.js"></script>
+<script src="scripts/services/config.js"></script>
+<script src="scripts/controllers/root.js"></script>
+<script src="scripts/controllers/setConfig.js"></script>
+<script src="scripts/controllers/weather.js"></script>
+<script src="scripts/services/groundSet.js"></script>
+<script src="scripts/controllers/phone.js"></script>
+<script src="scripts/controllers/tv.js"></script>
+<script src="scripts/controllers/ip.js"></script>
+<script src="scripts/controllers/spLive.js"></script>
+<script src="scripts/services/areaInfo.js"></script>
+<script src="scripts/services/localStorage.js"></script>
+<script src="scripts/controllers/gdbus.js"></script>
+<script src="scripts/controllers/clothes.js"></script>
+<!-- endbuild -->
+</body>
+</html>
